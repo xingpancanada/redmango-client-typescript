@@ -70,7 +70,7 @@ function PaymentForm({ data, userInput }: orderSummaryProps) {
 
       if(response){
         if(response.data?.result.status === SD_Status.CONFIRMED){
-          setShoppingCart(null);
+          dispatch(setShoppingCart(null));
           navigate(`/order/orderConfirmed/${response.data.result.orderHeaderId}`);
         }else{
           navigate('/failed');
@@ -98,3 +98,7 @@ function PaymentForm({ data, userInput }: orderSummaryProps) {
 }
 
 export default PaymentForm
+
+function dispatch(arg0: any) {
+  throw new Error('Function not implemented.');
+}
