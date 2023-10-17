@@ -5,6 +5,7 @@ import { apiResponse, cartItemModel, orderSummaryProps } from '../../../Interfac
 import { useCreateOrderMutation } from '../../../Apis/orderApi';
 import { SD_Status } from '../../../Utility/SD';
 import { useNavigate } from 'react-router-dom';
+import { setShoppingCart } from '../../../Storage/Redux/shoppingCartSlice';
 
 //4242 4242 4242 4242 
 
@@ -69,6 +70,7 @@ function PaymentForm({ data, userInput }: orderSummaryProps) {
 
       if(response){
         if(response.data?.result.status === SD_Status.CONFIRMED){
+          setShoppingCart(null);
           navigate(`/order/orderConfirmed/${response.data.result.orderHeaderId}`);
         }else{
           navigate('/failed');
