@@ -2,5 +2,7 @@
   "appService.zipIgnorePattern": [
     "node_modules{,/**}",
     ".vscode{,/**}"
-  ]
+  ],
+  "appService.defaultWebAppToDeploy": "/subscriptions/ce220ffb-d41e-43ce-bcf0-3a26198c3e52/resourceGroups/reactdotnet-group/providers/Microsoft.Web/sites/MyAquaticStore",
+  "appService.deploySubpath": "."
 }
