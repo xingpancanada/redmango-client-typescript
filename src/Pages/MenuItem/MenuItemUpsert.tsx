@@ -6,10 +6,15 @@ import { MainLoader } from '../../Components/Page/Common';
 import { SD_Categories } from '../../Utility/SD';
 
 const Categories = [
-  SD_Categories.APPETIZER,
-  SD_Categories.ENTREE,
-  SD_Categories.DESSERT,
-  SD_Categories.BEVERAGES,
+  // SD_Categories.APPETIZER,
+  // SD_Categories.ENTREE,
+  // SD_Categories.DESSERT,
+  // SD_Categories.BEVERAGES,
+
+  SD_Categories.FIGHTINGFISH,
+  SD_Categories.GOLDFISH,
+  SD_Categories.KOIFISH,
+  SD_Categories.ANGELFISH,
 ];
 
 const menuItemData = {

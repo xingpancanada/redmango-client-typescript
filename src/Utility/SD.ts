@@ -13,10 +13,14 @@ export enum SD_Status {
 }
 
 export enum SD_Categories {
-  APPETIZER = 'Appetizer',
-  ENTREE = 'Entree',
-  DESSERT = 'Dessert',
-  BEVERAGES = 'Beverages',
+  // APPETIZER = 'Appetizer',
+  // ENTREE = 'Entree',
+  // DESSERT = 'Dessert',
+  // BEVERAGES = 'Beverages',
+  FIGHTINGFISH = 'Fighting Fish',
+  GOLDFISH = 'Gold Fish',
+  KOIFISH = 'Koi Fish',
+  ANGELFISH = 'Angel Fish',
 }
 
 export enum SD_SortTypes {

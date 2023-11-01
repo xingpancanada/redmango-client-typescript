@@ -24,30 +24,6 @@ function MenuItemList() {
     SD_SortTypes.PRICE_HIGH_LOW,
   ];
 
-  // for d3js
-  // const width = 500;
-  // const height = 150;
-  // const padding = 20;
-  // const maxValue = 100;
-  // const [chartdata, setChartdata] = useState<any>([]);
-  // const svgRef = useRef();
-
-
-  // useEffect(() => {
-  //   fetch("https://redmangoreactnetcore.azurewebsites.net/api/MenuItem").then(resp => resp.json()).then(data => {
-  //     console.log("fetch menuitem data:", data);
-  //     setMenuItems(data.result);
-  //   })
-  // }, []);
-
-  // return (
-  //   <div className='row container'>
-  //     {menuItems.length > 0 && menuItems.map((menuItem, index) => (
-  //       <MenuItemCard key={index} menuItem={menuItem} />
-  //     ))}
-  //   </div>
-  // )
-
   //228. call slice to fetch data
   const dispatch = useDispatch();
   const { data, isLoading, isSuccess, isError, error } = useGetMenuItemsQuery(null);

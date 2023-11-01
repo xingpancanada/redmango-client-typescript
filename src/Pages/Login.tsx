@@ -94,6 +94,9 @@ function Login() {
           </button>
         </div>
       </form>
+      <div className='mt-5'>
+        <p style={{ fontSize: '0.8rem' }}>For testing if you don't want to register: "userName": "adminTest", "password": "adminTest123"</p>
+      </div>
     </div>
   )
 }
