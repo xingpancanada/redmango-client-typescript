@@ -7,7 +7,6 @@ import { menuItemModel } from '../../../Interfaces';
 import { MainLoader } from '../Common';
 import { RootState } from '../../../Storage/Redux/store';
 import { SD_SortTypes } from '../../../Utility/SD';
-import * as d3 from 'd3';
 
 function MenuItemList() {
   const [menuItems, setMenuItems] = useState<menuItemModel[]>([]);
@@ -106,24 +105,6 @@ function MenuItemList() {
   }, [data?.result, dispatch, isLoading]);
 
 
-  // useEffect(() => {
-  //   const xScale = d3.scalePoint().domain(chartdata?.map((d: any) => d.name)).range([(0 + padding), (width - padding)]);
-  //   const yScale = d3.scaleLinear().domain([0, d3.max(chartdata, (d: any) => d.price)]).range([height - padding, 0 + padding]);
-
-  //   const line = d3.line().x((d: any)=> xScale(d.name)).y((d: any)=>yScale(d.price));
-
-  //   d3.select(svgRef.current).select('path').attr('d', (value)=>line(chartdata)).attr('fill', 'none').attr('stroke', 'gray');
-
-  //   const xAxis = d3.axisBottom(xScale);
-  //   const yAxis = d3.axisLeft(yScale);
-
-  //   d3.select('#xaxis').remove(); // clear firstly
-  //   d3.select(svgRef.current).append('g').attr('transform', `translate(0, ${height-padding})`).attr('id', 'xaxis').call(xAxis);
-  //   d3.select('#yaxis').remove(); // clear firstly
-  //   d3.select(svgRef.current).append('g').attr('transform', `translate(${padding}, 0)`).attr('id', 'yaxis').call(yAxis);
-  // }, [chartdata]);
-
-
 
   if (isLoading) {
     return <MainLoader />
@@ -155,16 +136,6 @@ function MenuItemList() {
         </ul>
       </div>
 
-      {/* <div>
-        <svg id='chart' ref={svgRef} viewBox="0 0 500 150">
-          <path d="" fill="none" stroke="gray" stroke-width="2" />
-        </svg>
-        <p>
-          <button type="button" onClick={() => setChartdata(menuItems)} className='mt-5'>
-            Chart data -- {JSON.stringify(menuItems)}
-          </button>
-        </p>
-      </div> */}
 
       {menuItems.length > 0 && menuItems.map((menuItem: menuItemModel, index: number) => (
         <MenuItemCard key={index} menuItem={menuItem} />
